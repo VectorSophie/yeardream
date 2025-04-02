@@ -1,60 +1,70 @@
-class Stack:
+from queue import Queue
+
+class orderInfo:
     
-    def __init__(self) :
-        
-        self.myStack = []
+    def __init__(self, t, d, v):
+        self.time = t
+        self.duration = d
+        self.vip = v
 
-    def push(self, n) :
-        
-        self.myStack.append(n)
+def selectQueue(normalQueue,vipQueue, time, orders):
+    normalInd = -1 if len(normalQueue.queue) == 0 else normalQueue.queue[0]
+    vipInd = -1 if len(vipQueue.queue) == 0 else vipQueue.queue[0]
 
-    def pop(self) :
-        
-        if self.size() == 0:
-            return
+    if vipInd == -1:
+        return normalQueue
+    if normalInd == -1:
+        return vipQueue
+
+    if time < orders[normalInd].time and time < orders[vipInd].time:
+        return vipQueue
+
+        if orders[vipInd].time <= orders[normalInd].time:
+            return vipQueue
         else:
-            self.myStack.pop()
+            return normalQueue
 
-    def size(self) :
-        
-        return len(self.myStack)
+    if time >= orders[normalInd].time and time < orders[vipInd].time:
+        return normalQueue
 
-    def empty(self) :
-        
-        if self.size() == 0:
-            return 1
+    if time >= orders[vipInd].time and time < orders[normalInd].time:
+        return vipQueue
+
+    return vipQueue
+
+def processOrder(orders) :
+    result = []
+
+    normalQueue = Queue()
+    vipQueue = Queue()
+
+    jobEndTime = 0
+    curTime = -1
+
+   
+    for i in range(len(orders)):
+        curTime = orders[i].time
+
+        if orders[i].vip == 0:
+            normalQueue.put(i)
         else:
-            return 0
+            vipQueue.put(i)
 
-    def top(self) :
+        while jobEndTime <= curTime and not(normalQueue.empty() and vipQueue.empty()):
+            target = selectQueue(normalQueue, vipQueue, jobEndTime, orders)
+            index = target.queue[0]
 
-        if self.empty() == 1:
-            return -1
-        else:
-            return self.myStack[-1]
+            jobEndTime = max(jobEndTime, orders[index].time) + orders[index].duration
 
-def notepad(s, commands) :
-    left = list(s)
-    right = []
+            result.append(index + 1)
+            target.get()
 
-    for line in commands:
-        command = line.split()
-        action = command[0]
+    while not (normalQueue.empty()and vipQueue.empty()):
+        target = selectQueue(normalQueue, vipQueue, jobEndTime, orders)
+        index = target.queue[0]
 
-        if action == "L":
-            if len(left) > 0:
-                v = left.pop()
-                right.append(v)
-        elif action == "R":
-            if len(right) > 0:
-                v = right.pop()
-                left.append(v)
-        elif action == "D":
-            if len(left) > 0:
-                left.pop()
-        elif action == "P":
-            left.append(command[1])
+        jobEndTime = max(jobEndTime, orders[index].time) + orders[index].duration
 
-    result = left + right[::-1]
-
-    return "".join(result)
+        result.append(index + 1)
+        target.get()
+    return result
