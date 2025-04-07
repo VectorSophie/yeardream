@@ -87,7 +87,6 @@ MYSQL Connections 에서 + 누르기.
 그럼 MYSQL에 진입한다.
 ERD도 그릴수 있고, 시각화가 편하다.
 
-
 ##주의사항
 
 뭐가 됐든 MYSQL을 사용할때는 docker container를 꼭 실행하자.
