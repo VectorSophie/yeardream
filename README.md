@@ -31,19 +31,21 @@ MYSQL Workbench가 열릴거임.
 VSC extension에서 docker 설치
 사용할 디렉토리에 docker-compose.yml 만들기
 
+![이런!](image-4.png)
+
 version: '3.8'
 
 services:
   localdb:
-    container_name: yeardream_db //yeardream_db 컨테이너 생성
-    image: mysql: latest //mysql 이미지 생성(제일 최근 버전)
+    container_name: yeardream_db 
+    image: mysql: latest 
     ports:
-      - 3309:3306 //3309는 호스트 포트, 3306는 디폴트 포트(3306를 이미 쓰고 있으면 1번으로 사용)
+      - 3309:3306 
     environment:
-      MYSQL_ROOT_PASSWORD: password //root 비밀번호 설정
-      MYSQL_DATABASE: yeardream_test //yeardream_test를 만듬
+      MYSQL_ROOT_PASSWORD: password 
+      MYSQL_DATABASE: yeardream_test 
     command:
-      - --character-set-server=utf8mb4 //UTF-8을 디폴트 설정
+      - --character-set-server=utf8mb4 
       - --collation-server=utf8mb4_unicode_ci
       - --log_bin_trust_function_creators=1
     volumes:
