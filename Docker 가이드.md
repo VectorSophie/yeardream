@@ -90,6 +90,13 @@ ERD도 그릴수 있고, 시각화가 편하다.
 뭐가 됐든 MYSQL을 사용할때는 docker container를 꼭 실행하자.
 docker-compose.yml의 MYSQL 버전과 MYSQL Workbench의 버전이 같은지 확인하자(다르면 사용에 매우 불편)
 
+갑자기 git 숫자가 올라갔다면
+docker-compose.yml과 같은 폴더에 
+
+![이런](image-3.png)
+
+아니면 github가 mysql 폴더 자체를 올릴려고 한다(그리고 root로 만들었으므로 삭제하는데 관리자 권력이 필요함)
+
 ###에러(작자가 경험해본 선에서)
 
 HCS_E_HYPERV_NOT_INSTALLED 에러
