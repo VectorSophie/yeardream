@@ -1,5 +1,6 @@
-###Docker, MYSQL Workbench 설치 가이드및 에러 대처법
-//이어드림 오프라인 컴퓨터가 전부 같은 설정이란 가정하에 작성
+##Docker, MYSQL Workbench 설치 가이드및 에러 대처법
+
+이어드림 오프라인 컴퓨터가 전부 같은 설정이란 가정하에 작성
 
 https://docs.docker.com/desktop/setup/install/windows-install/
 에서 "Docker Desktop for Windows - x86_64" 다운로드
@@ -14,7 +15,7 @@ latest tag으로 run.
 container가 열릴거임.
 이제 MYSQL Workbench 설치.
 
-###MYSQL Workbench 설치
+##MYSQL Workbench 설치
 
 https://dev.mysql.com/downloads/file/?id=536668
 에서 "No thanks, just start my downlad" 누르기.
@@ -25,7 +26,7 @@ MYSQL Workbench 누르기
 Finish 누르기.
 MYSQL Workbench가 열릴거임.
 
-###Docker Container 실행및 비번 설정(VSC)
+##Docker Container 실행및 비번 설정(VSC)
 
 VSC extension에서 docker 설치
 사용할 디렉토리에 docker-compose.yml 만들기
@@ -56,7 +57,7 @@ docker-compose up -d
 
 실행, 그럼 docker에 yeardream이란 containers가 생긴걸 볼수 있다.
 
-###MYSQL 사용
+##MYSQL 사용
 
 1.VSC terminal에서 하기
 
@@ -85,7 +86,7 @@ MYSQL Connections 에서 + 누르기.
 ERD도 그릴수 있고, 시각화가 편하다.
 
 
-###주의사항
+##주의사항
 
 뭐가 됐든 MYSQL을 사용할때는 docker container를 꼭 실행하자.
 docker-compose.yml의 MYSQL 버전과 MYSQL Workbench의 버전이 같은지 확인하자(다르면 사용에 매우 불편)
@@ -101,15 +102,15 @@ docker-compose.yml과 같은 폴더에
 
 HCS_E_HYPERV_NOT_INSTALLED 에러
 
-//wsl 설치 확인
+1.wsl 설치 확인
 wsl -l -v
 wsl --install
 
-//기능 켰다 끄기
+2.기능 켰다 끄기
 제어판->Windows 기능 켜기/끄기
 Hyper-V, Windows 하이퍼바이저 플랫폼, 가상 머신 플랫폼, Linux용 Windows 하위 시스템 켜기
 
-//BIOS로 Windows 기능 접근
+3.BIOS로 Windows 기능 접근
 컴퓨터 재시작, 시작할때 한성 로고 뜰때 'Delete'키 연타(ASUS BIOS 입장)
 Advanced Mode -> Advanced -> 제일 아래에 Intel Virtualization Technology 켜기(enable)
 F10 누르기(BIOS 나가기)
