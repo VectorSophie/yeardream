@@ -103,7 +103,12 @@ docker-compose.yml과 같은 폴더에
 
 ###에러(작자가 경험해본 선에서)
 
-HCS_E_HYPERV_NOT_INSTALLED 에러
+WSL2 Integration with distro Ubuntu unexpectedly stopped 에러(docker)
+wsl -l -v
+만약 ubuntu랑 docker의 버전이 다르면
+wsl.exe --set-version Ubuntu 2
+
+HCS_E_HYPERV_NOT_INSTALLED 에러(mysql)
 
 1.wsl 설치 확인
 wsl -l -v
