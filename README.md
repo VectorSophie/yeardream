@@ -36,22 +36,22 @@ VSC extension에서 docker 설치
 version: '3.8'
 
 services:
-  localdb:
-    container_name: yeardream_db 
-    image: mysql: latest 
+  yeardreamdb:
+    container_name: yeardream_db
+    image: mysql:8.0.41
     ports:
-      - 3309:3306 
+      - 3309:3306
     environment:
-      MYSQL_ROOT_PASSWORD: password 
-      MYSQL_DATABASE: yeardream_test 
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: yeardream_test
     command:
-      - --character-set-server=utf8mb4 
+      - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
       - --log_bin_trust_function_creators=1
     volumes:
-      - ./mysql:/var/lib/mysql
+      - mysql:/var/lib/mysql
 
-입력.
+넣기. 바뀐거는 mysql 폴더를 덮어쓴다. 그리고 버전 충돌(latest는 존재하지도 않는 9.2.0 불러옴) 해결.
 
 VSC terminal에서 cmd 실행, docker.yml 있는 디렉토리에서
 
@@ -87,10 +87,12 @@ MYSQL Connections 에서 + 누르기.
 그럼 MYSQL에 진입한다.
 ERD도 그릴수 있고, 시각화가 편하다.
 
+끝낼때는 도커 데스크탑에서 컨테이너를 멈추거나, cmd에서 docker-compose down 하면 된다.
+
 ##주의사항
 
 뭐가 됐든 MYSQL을 사용할때는 docker container를 꼭 실행하자.
-docker-compose.yml의 MYSQL 버전과 MYSQL Workbench의 버전이 같은지 확인하자(다르면 사용에 매우 불편)
+docker-compose.yml의 MYSQL 버전과 MYSQL Workbench의 버전이 같은지 확인하자(다르면 버전 충돌)
 
 갑자기 git 숫자가 올라갔다면
 docker-compose.yml과 같은 폴더에 
