@@ -1,0 +1,1 @@
+SELECT * FROM employees WHERE (first_name ='Chirstian' OR first_name ='Georgi') AND gender = 'M' AND hire_date != '1986-06-26';

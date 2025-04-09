@@ -1,0 +1,1 @@
+SELECT * FROM employees WHERE last_name IN ('Michaels', 'Genin', 'Peha');
