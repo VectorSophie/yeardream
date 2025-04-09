@@ -1,0 +1,1 @@
+SELECT DISTINCT emp_no FROM salaries;
