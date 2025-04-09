@@ -1,0 +1,1 @@
+SELECT * FROM employees WHERE hire_date LIKE '1997-07-07';

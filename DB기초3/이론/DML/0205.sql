@@ -1,0 +1,1 @@
+SELECT * FROM salaries ORDER BY salary asc;
