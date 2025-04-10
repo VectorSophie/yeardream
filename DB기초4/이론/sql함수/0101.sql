@@ -1,0 +1,2 @@
+SELECT COUNT(*) FROM book;
+SELECT COUNT(*) FROM user;

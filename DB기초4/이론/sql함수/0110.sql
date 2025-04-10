@@ -1,0 +1,1 @@
+SELECT MIN(salary) FROM salaries;

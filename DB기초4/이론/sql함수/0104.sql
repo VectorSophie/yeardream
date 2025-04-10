@@ -1,0 +1,1 @@
+SELECT * FROM salaries LIMIT 5;
