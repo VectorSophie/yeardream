@@ -14,7 +14,7 @@ CREATE TABLE kickboard(
 
 
 ALTER TABLE kickboard ADD CONSTRAINT member_id_unique UNIQUE(member_id);
-ALTER TABLE kickboard Alter price SET DEFAULT 1000;
+ALTER TABLE kickboard ALTER price SET DEFAULT 1000;
 ALTER TABLE kickboard DROP CONSTRAINT rental_time_check;
 
 INSERT INTO kickboard(member_id, member_name, member_birthday, id, brand, rental_location, rental_time, price)
