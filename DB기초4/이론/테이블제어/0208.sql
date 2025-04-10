@@ -1,0 +1,1 @@
+SELECT * FROM rental LEFT JOIN user ON rental.user_id = user.id;

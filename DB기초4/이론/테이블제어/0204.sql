@@ -1,0 +1,1 @@
+SELECT emp_no, COUNT(*)  FROM salaries GROUP BY emp_no HAVING COUNT(salary)>=10;

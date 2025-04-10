@@ -1,0 +1,1 @@
+SELECT * FROM salaries RIGHT JOIN employees ON salaries.emp_no = employees.emp_no;

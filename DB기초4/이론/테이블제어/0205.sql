@@ -1,0 +1,1 @@
+SELECT * FROM rental INNER JOIN user;
