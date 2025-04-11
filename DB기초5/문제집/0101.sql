@@ -1,0 +1,1 @@
+SELECT * FROM middle_test INNER JOIN students on middle_test.student_id = students.student_id WHERE math >= (SELECT math FROM middle_test WHERE student_id = 10504);
