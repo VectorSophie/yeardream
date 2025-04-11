@@ -1,0 +1,1 @@
+SELECT AVG(math), MAX(math), MIN(math) FROM test;

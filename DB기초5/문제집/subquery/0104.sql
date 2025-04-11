@@ -1,0 +1,1 @@
+SELECT DISTINCT name FROM class ORDER BY name DESC;

@@ -1,0 +1,1 @@
+SELECT * FROM member WHERE name = '김진모';
