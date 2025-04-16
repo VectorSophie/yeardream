@@ -1,0 +1,4 @@
+DESC APPLICATION;
+DESC APPLICATION_DTL;
+
+SELECT APPLICATION.app_id, app_name, app_content FROM APPLICATION INNER JOIN APPLICATION_DTL ON APPLICATION.app_id = APPLICATION_DTL.app_id WHERE app_device = 'iphone' OR app_device = 'all' ORDER BY app_id ASC;
