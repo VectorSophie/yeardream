@@ -1,0 +1,1 @@
+SELECT name FROM items WHERE id = (SELECT item_id FROM logs WHERE user_id = 3 AND is_bought = 1)

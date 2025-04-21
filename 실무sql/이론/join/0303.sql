@@ -1,0 +1,1 @@
+SELECT user_id, AVG(price), MAX(price), SUM(price) FROM logs JOIN items ON logs.item_id = items.id WHERE is_bought = 1 GROUP BY user_id;

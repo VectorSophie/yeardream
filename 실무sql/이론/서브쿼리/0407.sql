@@ -1,0 +1,1 @@
+SELECT COALESCE(user_id,0) FROM logs;

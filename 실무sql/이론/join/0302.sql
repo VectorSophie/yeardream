@@ -1,0 +1,1 @@
+SELECT * FROM items JOIN logs on items.id = logs.item_id LIMIT 10;

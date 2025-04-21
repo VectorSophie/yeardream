@@ -1,0 +1,1 @@
+SELECT brand,COUNT(*) FROM items WHERE price <= 12000 GROUP BY brand;

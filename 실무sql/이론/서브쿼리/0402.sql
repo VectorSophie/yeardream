@@ -1,0 +1,1 @@
+SELECT DISTINCT price FROM items WHERE price < (SELECT price FROM items WHERE id = 751);

@@ -1,0 +1,1 @@
+SELECT sex, COUNT(*) FROM users WHERE id IN (SELECT DISTINCT user_id FROM logs WHERE is_recommended = 1 AND is_bought = 1 AND user_id IS NOT NULL) GROUP BY sex;

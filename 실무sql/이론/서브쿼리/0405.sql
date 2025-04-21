@@ -1,0 +1,1 @@
+SELECT DISTINCT price FROM items WHERE price > ANY (SELECT price FROM items WHERE brand = '브랜드B' AND category = '분류3')

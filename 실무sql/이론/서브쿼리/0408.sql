@@ -1,0 +1,1 @@
+SELECT EXTRACT(month FROM log_date) extract_month,COUNT(*) FROM logs GROUP BY extract_month

@@ -1,0 +1,1 @@
+SELECT * FROM users JOIN logs on users.id = logs.user_id;
