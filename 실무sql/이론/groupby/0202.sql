@@ -1,0 +1,1 @@
+SELECT brand, COUNT(*) FROM items GROUP BY brand;

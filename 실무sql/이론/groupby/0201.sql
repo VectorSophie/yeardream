@@ -1,0 +1,1 @@
+SELECT user_id, COUNT(*) FROM logs WHERE is_bought = 1 GROUP BY user_id;
