@@ -1,0 +1,1 @@
+SELECT brand, category, COUNT(*) FROM logs JOIN items ON item_id = items.id WHERE is_bought = 1 GROUP BY brand, category ORDER BY COUNT(*) DESC LIMIT 10;

@@ -1,0 +1,1 @@
+SELECT id, name, brand, category, price FROM items WHERE id NOT IN (SELECT item_id FROM logs WHERE is_bought = 1) ORDER BY id ASC;

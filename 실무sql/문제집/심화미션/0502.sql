@@ -1,0 +1,1 @@
+SELECT s.student_id FROM STUDENT s LEFT OUTER JOIN LATE_CHECK_LIST l ON s.student_id = l.student_id WHERE student_grade = 1;

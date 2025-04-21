@@ -1,0 +1,1 @@
+SELECT coin_name, coin_buy_price, coin_now_price from ELICE_WALLET INNER JOIN EXCHANGE ON ELICE_WALLET.coin_ticker = EXCHANGE.coin_ticker ORDER BY coin_name;

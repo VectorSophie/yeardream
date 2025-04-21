@@ -1,0 +1,1 @@
+SELECT name, price FROM items WHERE id NOT IN (SELECT item_id FROM logs WHERE is_recommended = 0 OR is_bought = 1) ORDER BY name ASC;

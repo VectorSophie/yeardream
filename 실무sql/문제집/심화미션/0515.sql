@@ -1,0 +1,1 @@
+SELECT DISTINCT users.id, name, COUNT(user_id) FROM users JOIN logs ON users.id = user_id WHERE is_bought = 1 GROUP BY users.id, users.name HAVING COUNT(user_id) >= 3 ORDER BY users.id;

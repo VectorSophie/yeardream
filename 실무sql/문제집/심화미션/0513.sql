@@ -1,0 +1,1 @@
+SELECT brand, category, AVG(price) FROM items GROUP BY brand, category ORDER BY brand, category;

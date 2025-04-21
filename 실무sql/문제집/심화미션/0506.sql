@@ -1,0 +1,1 @@
+SELECT a.employee_id, a.name, a.salary, b.name, b.salary FROM EMPLOYEE a INNER JOIN EMPLOYEE b ON a.manager_id = b.employee_id WHERE a.salary > b.salary ORDER BY a.employee_id;
