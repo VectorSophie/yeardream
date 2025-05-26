@@ -1,0 +1,1 @@
+print("짝수입니다." if int(input()) % 2==0 else "홀수입니다.")
