@@ -1,4 +1,4 @@
-##Docker, MYSQL Workbench 설치 가이드및 에러 대처법
+Docker, MYSQL Workbench 설치 가이드및 에러 대처법
 
 이어드림 오프라인 컴퓨터가 전부 같은 설정이란 가정하에 작성
 
@@ -15,7 +15,7 @@ latest tag으로 run.
 container가 열릴거임.
 이제 MYSQL Workbench 설치.
 
-##MYSQL Workbench 설치
+MYSQL Workbench 설치
 
 https://dev.mysql.com/downloads/file/?id=536668
 에서 "No thanks, just start my downlad" 누르기.
@@ -26,7 +26,7 @@ MYSQL Workbench 누르기
 Finish 누르기.
 MYSQL Workbench가 열릴거임.
 
-##Docker Container 실행및 비번 설정(VSC)
+Docker Container 실행및 비번 설정(VSC)
 
 VSC extension에서 docker 설치
 사용할 디렉토리에 docker-compose.yml 만들기
@@ -59,7 +59,7 @@ docker-compose up -d
 
 실행, 그럼 docker에 yeardream이란 containers가 생긴걸 볼수 있다.
 
-##MYSQL 사용
+MYSQL 사용
 
 1.VSC terminal에서 하기
 
@@ -89,7 +89,7 @@ ERD도 그릴수 있고, 시각화가 편하다.
 
 끝낼때는 도커 데스크탑에서 컨테이너를 멈추거나, cmd에서 docker-compose down 하면 된다.
 
-##주의사항
+주의사항
 
 뭐가 됐든 MYSQL을 사용할때는 docker container를 꼭 실행하자.
 docker-compose.yml의 MYSQL 버전과 MYSQL Workbench의 버전이 같은지 확인하자(다르면 버전 충돌)
@@ -101,7 +101,7 @@ docker-compose.yml과 같은 폴더에
 
 아니면 github가 mysql 폴더 자체를 올릴려고 한다(그리고 root로 만들었으므로 삭제하는데 관리자 권력이 필요함)
 
-###에러(작자가 경험해본 선에서)
+에러(작자가 경험해본 선에서)
 
 WSL2 Integration with distro Ubuntu unexpectedly stopped 에러(docker)
 wsl -l -v
