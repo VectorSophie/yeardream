@@ -1,0 +1,3 @@
+> use myDatabase
+> db.initialCollection.insertOne({hello: "world"})
+> db.initialCollection.find()
