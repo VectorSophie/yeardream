@@ -1,8 +1,3 @@
-'''
-CheckParen 함수를 완성하세요.
-단, Stack 클래스를 사용하세요.
-'''
-
 class Stack:
     
     def __init__(self) :
